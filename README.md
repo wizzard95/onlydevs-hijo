@@ -72,3 +72,12 @@ added 1 package, and audited 179 packages in 4s
   run `npm fund` for details
 
 found 0 vulnerabilities
+
+PS C:\Users\damian\desktop\hijo\onlydevs-hijo> npm install --save-dev @iconify/react  
+
+added 2 packages, and audited 181 packages in 5s
+
+44 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
