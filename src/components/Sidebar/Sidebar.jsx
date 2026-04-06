@@ -20,7 +20,7 @@ export const Sidebar = () => {
         },
          {
             label:"Colecciones",
-            icon:"ic:baseline-collectiones-bookmark",
+            icon:"ic:baseline-collections-bookmark",
             to:"/colecciones"
         },
          {
