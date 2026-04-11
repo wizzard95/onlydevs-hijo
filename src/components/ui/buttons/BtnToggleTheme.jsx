@@ -1,7 +1,9 @@
 export const BtnToggleTheme = () => {
     return (
-        <div className="h-screen bg-amber-300 text-black">
+        <button className="flex items-center gap-3 p-2 rounded-lg
+        hover:bg-gray-100 dark:hover:bg-primary/20 transition-all
+        justify-center cursor-pointer">
             <span>BtnToggleTheme</span>
-        </div>
+        </button>
     );
 };
