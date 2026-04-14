@@ -45,7 +45,7 @@ export const Sidebar = () => {
 
     return (
         <div className="h-screen p-2 bg-white dark:bg-bg-dark
-        transition-all duration-300">
+        transition-all duration-300 flex flex-col ">
            {/* LOGO */}
             <div className="">
                 ONLYDEVS
@@ -59,7 +59,7 @@ export const Sidebar = () => {
                 className={({isActive})=>`flex items-center gap-3 p-2 
                 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-primary/10
                 dark:hover:text-primary transition-all w-full
-                justify-start
+                justify-start 
                 ${
                   /* colorea el icono y el titulo de la opcion
                   en donde se encuentra dentro del sidebar
