@@ -4,7 +4,7 @@ export const BtnLogout = () => {
     return (
         <div className="flex items-center gap-3 p-2 rounded-lg
         hover:bg-gray-100 dark:hover:bg-primary/20 transition-all
-        justify-center cursor-pointer">
+        justify-start cursor-pointer">
             <Icon icon=
             {"solar:logout-2-bold-duotone"} width={24} height={24} />
             <span>Cerrar sesión</span>
