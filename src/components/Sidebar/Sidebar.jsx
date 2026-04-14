@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { BtnToggleTheme } from "../ui/buttons/BtnToggleTheme";
+import { BtnLogout } from "../ui/buttons/BtnLogout";
 
 export const Sidebar = () => {
     const links =[
@@ -74,6 +75,7 @@ export const Sidebar = () => {
             })}
             </nav>
             <BtnToggleTheme />
+            <BtnLogout />
         </div>
     )
 } 
