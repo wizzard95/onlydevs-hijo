@@ -71,7 +71,9 @@ export const Sidebar = () => {
                 }
                 `} >
                 <Icon icon={item.icon} width={24} height={24} />
-                <span>{item.label}</span>
+                <span className="hidden sm:block"> 
+                    {item.label}
+                </span>
                 </NavLink>
                 )
             })}
