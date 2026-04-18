@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react"
-import { Header } from "../components/HomePageComponents/Header"
+import { Header } from "../components/HomePageComponents/HeaderSticky"
 
 export const HomePage = () => {
     return (
