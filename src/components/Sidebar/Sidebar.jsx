@@ -60,7 +60,7 @@ export const Sidebar = () => {
                 className={({isActive})=>`flex items-center gap-3 p-2 
                 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-primary/10
                 dark:hover:text-primary transition-all w-full
-                justify-start 
+                justify-center sm:justify-start
                 ${
                   /* colorea el icono y el titulo de la opcion
                   en donde se encuentra dentro del sidebar
