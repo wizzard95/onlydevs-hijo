@@ -11,7 +11,9 @@ export const BtnToggleTheme = () => {
         onClick={setTheme}
         >
             <span>{theme === "light" ? "☀️" : "🌑"}</span>
-            <span>{theme === "light" ? "Claro" : "Oscuro"}</span>
+            <span className="hidden sm:block">
+                {theme === "light" ? "Claro" : "Oscuro"}
+            </span>
         </button>
     );
 };

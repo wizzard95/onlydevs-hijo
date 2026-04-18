@@ -7,7 +7,9 @@ export const BtnNewPost = () => {
         hover:bg-primary/90 font-semibold p-2 rounded-full
         items-center gap-2 transition cursor-pointer">
          <Icon icon="ic:baseline-add" width={20} height={20} />
-            <span>NUEVA PUBLICACIÓN</span>
+            <span className="hidden sm:block">
+                NUEVA PUBLICACIÓN
+            </span>
         </button>
     )
 }

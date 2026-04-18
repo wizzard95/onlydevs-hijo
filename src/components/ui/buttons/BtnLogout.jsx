@@ -7,7 +7,9 @@ export const BtnLogout = () => {
         justify-start cursor-pointer">
             <Icon icon=
             {"solar:logout-2-bold-duotone"} width={24} height={24} />
-            <span>Cerrar sesión</span>
+            <span className="hidden sm:block">
+                Cerrar sesión
+            </span>
         </div>
     )
 }
