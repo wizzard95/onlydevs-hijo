@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react"
-import { Header } from "../components/HomePageComponents/HeaderSticky"
+import { HeaderSticky } from "../components/HomePageComponents/HeaderSticky"
 
 export const HomePage = () => {
     return (
@@ -10,7 +10,7 @@ export const HomePage = () => {
              
                 <article className="flex flex-col h-screen overflow-hidden border
                 border-gray-200 border-t-0 border-b-0 dark:border-gray-600">
-                    <Header />
+                    <HeaderSticky />
                     
                         Principal
                 </article>

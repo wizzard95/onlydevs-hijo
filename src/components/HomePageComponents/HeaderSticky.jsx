@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react"
 
-export const Header = () => {
+export const HeaderSticky = () => {
     return (
         <div className="sticky top-0 z-10 border-b border-gray-200
         dark:border-gray-600 px-4 py-3">
