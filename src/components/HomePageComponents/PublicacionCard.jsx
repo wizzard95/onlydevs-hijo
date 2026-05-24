@@ -34,6 +34,23 @@ export const PublicacionCard = () => {
                     }
                 />
             </div>
+            <div className="flex justify-between mt-4 gap-2 cursor-pointer">
+                <button>
+                    <Icon
+                        icon={'mdi:heart-outline'}
+                        className="text-3xl p-1 rounded-full text-gray-400 
+                        hover:bg-[rgba(78,184,233,0.2)] cursor-pointer"
+                    />
+                </button>
+                <button className="flex items-center">
+                    <Icon
+                        icon={'mdi:comment-outline'}
+                        className="text-3xl p-1 rounded-full text-gray-400 
+                        hover:bg-[rgba(78,184,233,0.2)] cursor-pointer"
+                    />
+                    <span className="text-xs md:text-sm">Comentar</span>
+                </button>
+            </div>
         </div>
     )
 }
