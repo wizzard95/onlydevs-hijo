@@ -64,12 +64,13 @@ export const LoginPage = () => {
                                 focus:ring-2 focus:ring-[#1d93ba]"
                             />
                             <button
+                                type="button"
                                 className="absolute top-1/2 -translate-y-1/2 right-3 text-gray-500 cursor-pointer"
                                 onClick={togglePasswordVisibility}
                             >
                                 <Icon
                                     icon={
-                                        showPassword ? 'mdi:eye-o' : 'mdi:eye'
+                                        showPassword ? 'mdi:eye-off' : 'mdi:eye'
                                     }
                                 />
                             </button>
