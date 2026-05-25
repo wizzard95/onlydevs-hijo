@@ -48,7 +48,9 @@ export const PublicacionCard = () => {
                         className="text-3xl p-1 rounded-full text-gray-400 
                         hover:bg-[rgba(78,184,233,0.2)] cursor-pointer"
                     />
-                    <span className="text-xs md:text-sm">Comentar</span>
+                    <span className="text-xs md:text-sm text-gray-400">
+                        Comentar
+                    </span>
                 </button>
             </div>
         </div>
