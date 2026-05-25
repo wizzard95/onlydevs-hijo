@@ -27,7 +27,7 @@ export const LoginPage = () => {
                         </span>
 
                         <span className="text-3xl font-semibold">
-                            {/* //* */} a tus creadores {/*  //* */}
+                            a tus creadores{' '}
                         </span>
                         <span className="text-3xl font-bold">favoritos</span>
                     </div>
@@ -41,8 +41,7 @@ export const LoginPage = () => {
                 {/* lado derecho - formulario de inicio de sesion */}
                 <div className="w-full max-w-md">
                     <h1 className="text-2xl font-medium mb-6 text-center">
-                        Iniciar sesión
-                        {/* //* */}
+                        Iniciar sesión{' '}
                         <span className="text-xl text-[#1d93ba]">
                             (modo invitado)
                         </span>
@@ -56,7 +55,7 @@ export const LoginPage = () => {
                                 focus:ring-2 focus:ring-[#1d93ba]"
                             />
                         </div>
-                        <div className="relative">
+                        <div className="relative mb-4">
                             <input
                                 type="password"
                                 placeholder="Contraseña"
@@ -75,7 +74,35 @@ export const LoginPage = () => {
                                 />
                             </button>
                         </div>
+                        <button
+                            className="w-full bg-gray-200 text-gray-500 font-medium py-3 hover:bg-[#1d93ba]
+                        rounded transition duration-200 cursor-pointer hover:text-white"
+                        >
+                            INICIAR SESIÓN
+                        </button>
                     </form>
+                    <div className="mt-4 text-xs text-gray-500 text-center">
+                        Al iniciar sesión y usar MySocialNet, aceptas nuestros{' '}
+                        {''}
+                        <a href="#" className="text-[#1d93ba]">
+                            Términos de servicio
+                        </a>{' '}
+                        y{' '}
+                        <a href="#" className="text-[#1d93ba]">
+                            Politica de privacidad.
+                        </a>{' '}
+                        y confirmas que tienes al menos 18 años.
+                    </div>
+                    <div className="mt-6 text-center">
+                        <a href="#" className="text-[#1d93ba] text-sm">
+                            ¿Haz olvidado la ontraseña?
+                        </a>
+                    </div>
+                    <div className="mt- text-center">
+                        <a href="#" className="text-[#1d93ba] text-sm">
+                            Registrate para MySocialNet
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>
