@@ -84,3 +84,7 @@ found 0 vulnerabilities
 <!-- * colocar color de fondo en el imagen cuando es mas pequeña -->
 
 npm i fast-average-color
+
+<!-- * supabase -->
+
+npm install @supabase/supabase-js
