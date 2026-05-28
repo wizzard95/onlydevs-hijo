@@ -1,14 +1,33 @@
 import { Icon } from '@iconify/react'
 import logo from '../assets/react.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useAuthStore } from '../store/AuthStore'
+import { useGenerarCodigosAleatorios } from '../hooks/useGenerarCodigosAleatorios'
+import { useCrearUsuarioYSesionMutate } from '../stack/LoginStack'
+import { Toaster } from 'sonner'
+
 export const LoginPage = () => {
     const [showPassword, setShowPassword] = useState(false)
+    const { setCredenciales } = useAuthStore()
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword)
     }
+    const { isPending, mutate } = useCrearUsuarioYSesionMutate()
+
+    useEffect(() => {
+        const response = useGenerarCodigosAleatorios()
+        const correoCompleto = response + '@gmail.com'
+        setCredenciales({ email: correoCompleto, password: response })
+        setEmail(correoCompleto)
+        setPassword(response)
+    }, [])
 
     return (
-        <div className="flex h-screen w-full">
+        <main className="flex h-screen w-full">
+            <Toaster />
             {/* lado izquierdo -baner azul */}
             <section
                 className="hidden md:flex md:w-1/2 bg-[#1d93ba] flex flex-col
@@ -46,11 +65,12 @@ export const LoginPage = () => {
                             (modo invitado)
                         </span>
                     </h1>
-                    <form>
+                    <form onSubmit={mutate}>
                         <div className="mb-4">
                             <input
                                 type="text"
                                 placeholder="Email"
+                                value={email}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none
                                 focus:ring-2 focus:ring-[#1d93ba]"
                             />
@@ -59,6 +79,7 @@ export const LoginPage = () => {
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder="Contraseña"
+                                value={password}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none
                                 focus:ring-2 focus:ring-[#1d93ba]"
                             />
@@ -75,6 +96,7 @@ export const LoginPage = () => {
                             </button>
                         </div>
                         <button
+                            disabled={isPending}
                             className="w-full bg-gray-200 text-gray-500 font-medium py-3 hover:bg-[#1d93ba]
                         rounded transition duration-200 cursor-pointer hover:text-white"
                         >
@@ -105,6 +127,6 @@ export const LoginPage = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     )
 }
