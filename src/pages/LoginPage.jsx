@@ -5,6 +5,7 @@ import { useAuthStore } from '../store/AuthStore'
 import { useGenerarCodigosAleatorios } from '../hooks/useGenerarCodigosAleatorios'
 import { useCrearUsuarioYSesionMutate } from '../stack/LoginStack'
 import { Toaster } from 'sonner'
+import { useForm } from 'react-hook-form'
 
 export const LoginPage = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -15,6 +16,7 @@ export const LoginPage = () => {
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword)
     }
+    const { handleSubmit } = useForm()
     const { isPending, mutate } = useCrearUsuarioYSesionMutate()
 
     useEffect(() => {
@@ -65,7 +67,7 @@ export const LoginPage = () => {
                             (modo invitado)
                         </span>
                     </h1>
-                    <form onSubmit={mutate}>
+                    <form onSubmit={handleSubmit(mutate)}>
                         <div className="mb-4">
                             <input
                                 type="text"
