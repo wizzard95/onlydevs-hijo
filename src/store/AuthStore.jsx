@@ -18,7 +18,7 @@ export const useSubcription = create((set) => {
     // *iniciar el estado
     const store = {
         user: null,
-        setUser: (user) => set({ user }),
+        /*    setUser: (user) => set({ user }), */
     }
     //* Listener que se ejecuta una vez cuando se importa el store
     supabase.auth.getSession().then(({ data: { session } }) => {
