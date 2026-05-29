@@ -24,11 +24,13 @@ export const useSubcription = create((set) => {
     supabase.auth.getSession().then(({ data: { session } }) => {
         if (session?.user) {
             set({ user: sessionStorage.user })
+            console.log('user', session.user)
         }
     })
     supabase.auth.onAuthStateChange((_event, session) => {
         if (session?.user) {
             set({ user: session.user })
+            console.log('user', session.user)
         } else {
             set({ user: null })
         }
